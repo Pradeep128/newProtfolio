@@ -16,10 +16,171 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css" rel="stylesheet" >
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    
+    <style>
+      .list-icons {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); /* 7 items per row */
+        gap: 5px; /* Space between grid items */
+        list-style-type: none; /* Remove default list styling */
+        padding: 0; /* Remove default padding */
+      }
+      .list-icons .list-inline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.5em; /* Smaller font size for text */
+        text-align: center; /* Center-align the text */
+        padding: 10px;
+      }
+      .list-icons .list-inline-item i {
+        font-size: 1.5em; /* Icon size */
+        margin-bottom: 4px; /* Space between icon and text */
+      }
+          /* Add some basic animation styles */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-out;
+    }
+
+    .list-icons {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .list-icons .list-inline-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.5em;
+      text-align: center;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .list-icons .list-inline-item i {
+      font-size: 1.5em;
+      margin-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+
+    .list-icons .list-inline-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .list-icons .list-inline-item:hover i {
+      color: #007bff;
+    }
+
+    .nav-item a {
+      transition: color 0.3s ease;
+    }
+
+    .nav-item a:hover {
+      color: #ffc107;
+    }
+
+    .navbar-brand img {
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand img:hover {
+      transform: scale(1.1);
+    }
+
+    .resume-section {
+      padding: 3rem 0;
+    }
+
+    .resume-item {
+      margin-bottom: 3rem;
+    }
+
+    .resume-date {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .text-primary {
+      color: #007bff !important;
+    }
+
+    .fa-ul>li {
+      position: relative;
+      padding-left: 2.5em;
+    }
+
+    .fa-ul>li span.fa-li {
+      position: absolute;
+      left: 0;
+    }
+
+    .fa-ul>li span.fa-li .fa-trophy {
+      color: #ffc107;
+    }
+
+    .navbar {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  /* Nav link hover effect */
+  .navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+    </style>
 
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
@@ -64,60 +225,59 @@
 
     <div class="container-fluid p-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column animate__animated animate__fadeIn" id="about">
         <div class="my-auto">
-          <h1 class="mb-0">Pradeep
-            <span class="text-primary">Rana</span>
-          </h1>
-          <div class="subheading mb-5">Suduguntapalya · CV Ramana Nagar Bangalore, 560093 · (+91) 9456113793 ·
-            <a href="mailto:name@email.com">Pradeeprana128.official@gmail.com</a>
-          </div>
-          <p class="mb-5">Software Engineer with Master's in Computer Science and Enginnering from IIT (ISM) Dhanbad. Currently working with Dell R&D at Bangalore, Specializing in Database Development, K8s, Docker, Ansible. Passionate about solving complex problems and always eager to learn, and teach.</p>
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/pradeeprana128/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="mailto:Pradeeprana128.official@gmail.com">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/pradeep.rana.7">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse" > 
-                  </i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/pradeep_rana__/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://x.com/Pradeep91918090">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
+            <h1 class="mb-0 animate__animated animate__fadeInDown">Pradeep
+                <span class="text-primary">Rana</span>
+            </h1>
+            <div class="subheading mb-5 animate__animated animate__fadeInDown">Suduguntapalya · CV Ramana Nagar Bangalore, 560093 · (+91) 9456113793 ·
+                <a href="mailto:name@email.com">Pradeeprana128.official@gmail.com</a>
+            </div>
+            <p class="mb-5 animate__animated animate__fadeInDown">Software Engineer with Master's in Computer Science and Enginnering from IIT (ISM) Dhanbad. Currently working with Dell R&D at Bangalore, Specializing in Database Development, K8s, Docker, Ansible. Passionate about solving complex problems and always eager to learn, and teach.</p>
+            <ul class="list-inline list-social-icons mb-0 animate__animated animate__fadeInDown">
+                <li class="list-inline-item animate__animated animate__fadeInDown">
+                    <a href="https://www.linkedin.com/in/pradeeprana128/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item animate__animated animate__fadeInDown">
+                    <a href="mailto:Pradeeprana128.official@gmail.com">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item animate__animated animate__fadeInDown">
+                    <a href="https://www.facebook.com/pradeep.rana.7">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item animate__animated animate__fadeInDown">
+                    <a href="https://www.instagram.com/pradeep_rana__/">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="list-inline-item animate__animated animate__fadeInDown">
+                    <a href="https://x.com/Pradeep91918090">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </div>
-      </section>
+    </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
@@ -210,24 +370,31 @@
 
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline list-icons">
-            <li class="list-inline-item"><i class="devicons devicons-cplusplus"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-python"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-go"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-docker"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-kubernetes"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-restapi"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-postgresql"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-sqlite"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-html5"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-css3"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-linux"></i></li>
-            <li class="list-inline-item"><i class="devicons devicons-ansible"></i></li>
-          </ul>
+            <li class="list-inline-item"><i class="fab fa-cuttlefish"></i><span>C++</span></li> <!-- Using Cuttlefish icon as a substitute -->
+    <li class="list-inline-item"><i class="fab fa-python"></i><span>Python</span></li>
+    <li class="list-inline-item"><i class="fas fa-code"></i><span>Go</span></li> <!-- No direct icon for Go, using generic code icon -->
+    <li class="list-inline-item"><i class="fab fa-docker"></i><span>Docker</span></li>
+    <li class="list-inline-item"><i class="fab fa-kubernetes"></i><span>Kubernetes</span></li>
+    <li class="list-inline-item"><i class="fas fa-cloud"></i><span>REST API</span></li> <!-- Using cloud icon as a substitute -->
+    <li class="list-inline-item"><i class="fas fa-database"></i><span>PostgreSQL</span></li>
+    <li class="list-inline-item"><i class="fas fa-database"></i><span>SQLite</span></li>
+    <li class="list-inline-item"><i class="fab fa-html5"></i><span>HTML5</span></li>
+    <li class="list-inline-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></li>
+    <li class="list-inline-item"><i class="fab fa-linux"></i><span>Linux</span></li>
+    <li class="list-inline-item"><i class="fas fa-robot"></i><span>Ansible</span></li>
+    <li class="list-inline-item"><i class="fas fa-tools"></i><span>Jenkins</span></li>
+    <li class="list-inline-item"><i class="fas fa-project-diagram"></i><span>Jira</span></li>
+    <li class="list-inline-item"><i class="fas fa-laptop-code"></i><span>IntelliJ</span></li>
+    <li class="list-inline-item"><i class="fas fa-project-diagram"></i><span>Confluence</span></li> <!-- Placeholder icon for Confluence -->
+    <li class="list-inline-item"><i class="fas fa-tools"></i><span>Keena</span></li> <!-- Placeholder icon for Keena -->
+    <li class="list-inline-item"><i class="fas fa-cloud"></i><span>REST</span></li> <!-- Reusing cloud icon for REST -->
+    <li class="list-inline-item"><i class="fab fa-vuejs"></i><span>VS Code</span></li> <!-- Using Vue.js icon as a substitute for VS Code -->
+  </ul>
+
+  <br>
+  <br>
           <div class="subheading mb-3">Workflow</div>
           <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
             <li>
               <i class="fa-li fa fa-check"></i>
               Cross Browser Testing &amp; Debugging</li>
@@ -244,8 +411,8 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
           <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+          <p>Apart from being a Software Developer, I enjoy most of my time being outdoors. In the winter, I am an avid explorer and like to uncover the snow covered mountain.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in AI, Machine learning, new gadget hunting.</p>
         </div>
       </section>
 
@@ -255,31 +422,30 @@
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Analytics Certified Developer</li>
+              Python Data Structures- University Of Michigan</li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              Mobile Web Specialist - Google Certification</li>
+              Google IT Support Specialization - Google Certification</li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              2<sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li>
+              Palo Alto Network Cybersecurity</li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
               1<sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006</li>
+              Award-winning idea presenter in all india Dell Competition</li>
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
-              3<sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005</li>
+              1<sup>nd</sup>
+              Top 1 percentile holder in GATE 2020</li>
+            <li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>st</sup>
+              I was the top 10 rank hoolder in GeeksforGeeks out of 2600 registered students from IIT Dhanbad in 2022</li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              1<sup>rd</sup>
+              Coder in Coding Competition at NIT Uttarakhand</li>
           </ul>
         </div>
       </section>
